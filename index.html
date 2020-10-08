@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-        <title>FromJoin</title>
-</head>
-<body>
-		
-    <legend><strong>FromJoin</strong></legend>
-    <br>
+  <head>
+    <meta charset="UTF-8">
+    <title>FromJoin</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body style="margin-left: 10px;">
+    <h2 style="margin-top: 5px; margin-bottom: 20px;">FromJoin</h2>
 
-    <label>Texto:</label>
-    <br><br>
-    <textarea id="texto" placeholder="Digite aqui..." rows="4" cols="100"></textarea>
-    <br><br>
-    <input id="button" type='button' value="Calcular" onclick="findTabela()">     
-    
-    <br><br><br>
+    <div id="lados" style="display: flex; justify-content: space-evenly;">
 
-    <legend>Resultado</legend>
-    <!--<div id ='resultado' style="position: relative; top: 8px"></div>-->
-    <ul id ="resultado"></ul>
-    <br><br><br>
-    <input type="reset" id="button" value="Limpar" onclick="limpar()">
-    <br><br>
-    
+      <div id="esq" style="margin-right: 10px;">
+        <h3 style="margin-bottom: 20px;">Query:</h3>
+        <textarea id="texto" placeholder="Digite aqui..." rows="20" cols="100" onkeypress="return enterPesquisa(event)"></textarea>
+      </div>
+
+      <div id="dir" style="margin-left: 10px; margin-right: 10px; width: 600px;">
+        <h3 style="margin-bottom: 20px;">Tabelas</h3>
+        <div style="height: 350px; width: 600px; border: 1px solid black; padding: 10px; overflow-y: scroll">
+          <ul id ="resultado"></ul>
+        </div>
+        <br><br>
+        <button class="btn btn-dark btn-lg" onclick="findTabela()">Procurar Tabelas</button>
+        <br><br>
+        <button class="btn btn-danger btn-lg" onclick="limpar()">Limpar</button>
+      </div>
+
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
