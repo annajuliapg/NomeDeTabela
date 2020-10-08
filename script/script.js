@@ -10,19 +10,23 @@ function findTabela() {
 
     lines.splice(0,1);
 
-    for (item of lines){
+    for (var i = 0; i < lines.length; i++){
 
-        for (var i = 0; i < item.length; i++){
-            if(item[i] == " "){
-                item = item.substr(0, i-1);
+        for (var j = 0; j < lines[i].length; j++){
+            if(lines[i][j] == " "){
+                lines[i] = lines[i].substr(0, j);
                 break;
             }
-            else if(item.substr(i,5) == "#(lf)"){
-                item = item.substr(0, i-1);
+            else if(lines[i].substr(j,5) == "#(lf)"){
+                lines[i] = lines[i].substr(0, j);
                 break;
             }
         }
+    }
 
+    lines = teste(lines);
+
+    for (item of lines){
         var itemElement = document.createElement('li');
         var itemText = document.createTextNode(item);
 
@@ -30,14 +34,11 @@ function findTabela() {
         result.appendChild(itemElement);
     }
 
-    teste(lines);
 }
 
 function teste (arr){
-    //var arr = ['foo', 'bar', 'foo'];
     var novaArr = arr.filter((este, i) => arr.indexOf(este) === i);
-    console.log(novaArr);
-    console.log("cheguei");
+    return novaArr;
 }
 
 function enterPesquisa(e){

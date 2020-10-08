@@ -6,10 +6,16 @@
     <link rel="shortcut icon" href="img\table.ico" type="image/x-icon">
     <link href="css\bootstrap.min.css" rel="stylesheet">
   </head>
-  <body style="margin-left: 10px;">
-    <h2 style="margin-top: 5px; margin-bottom: 10px;">Procura Tabela</h2>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg" style="background-color: royalblue; display: flex; justify-content: space-around; margin-bottom: 10px;">
+      <h3 style="margin-top: 5px; margin-bottom: 10px; color: whitesmoke;">
+        Procura Tabela
+      </h3>
+    </nav>
+    
 
-    <div id="lados" style="display: flex; justify-content: space-evenly;">
+    <div id="lados" style="display: flex; justify-content: space-evenly; margin-left: 10px;">
 
       <div id="esq" style="margin-right: 10px;">
         <h3 style="margin-bottom: 20px;">Query:</h3>
@@ -21,7 +27,7 @@
         <div style="height: 350px; width: 600px; border: 1px solid black; padding: 10px; overflow-y: auto">
           <ul id ="resultado"></ul>
         </div>
-        <br><br>
+        <br>
         <button class="btn btn-dark btn-lg" onclick="findTabela()">Procurar Tabelas</button>
         <br><br>
         <button class="btn btn-danger btn-lg" onclick="limpar()">Limpar</button>
