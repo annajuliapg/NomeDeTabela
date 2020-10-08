@@ -1,4 +1,3 @@
-
 function findTabela() {
 
     var result = document.querySelector('#resultado');
@@ -31,19 +30,11 @@ function findTabela() {
         result.appendChild(itemElement);
     }
 }
-/*
 
-function findTabela(){
-    var result = document.querySelector('#resultado');
-
-    var textArea = document.getElementById('texto').value;
-
-    var s = "anna FROM tex_ods..tb_CEP 3sv FROM ANNA"
-    //const re = /FROM \w/;
-
-    console.log(s.search(re));
+function enterPesquisa(e){
+    if (e.keyCode == 13) findTabela();
 }
-*/
+
 function limpar() {
     document.getElementById('texto').value = '';
     document.getElementById("resultado").innerHTML = '';
