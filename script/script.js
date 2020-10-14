@@ -41,10 +41,6 @@ function teste (arr){
     return novaArr;
 }
 
-function enterPesquisa(e){
-    if (e.keyCode == 13) findTabela();
-}
-
 function limpar() {
     document.getElementById('texto').value = '';
     document.getElementById("resultado").innerHTML = '';
