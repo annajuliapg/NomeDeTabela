@@ -24,7 +24,7 @@ function findTabela() {
         }
     }
 
-    lines = teste(lines);
+    lines = removeDuplicate(lines);
 
     for (item of lines){
         var itemElement = document.createElement('li');
@@ -36,7 +36,7 @@ function findTabela() {
 
 }
 
-function teste (arr){
+function removeDuplicate (arr){
     var novaArr = arr.filter((este, i) => arr.indexOf(este) === i);
     return novaArr;
 }
